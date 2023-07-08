@@ -1,0 +1,80 @@
+/* style.css */
+
+/* Navbar styles */
+.navbar {
+    background-color: #99bbc6;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    color: #1131e3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #181010;
+  }
+  
+  .navbar-toggler {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' fill='%23ffffff'%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M1 4h14M1 8h14M1 12h14'/%3E%3C/svg%3E");
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Additional styles for responsiveness */
+  
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      width: 300px;
+      padding: 1rem;
+      transition: right 0.3s ease-in-out;
+      background-color: #88926e;
+    }
+    
+    .navbar-collapse.show {
+      right: 0;
+    }
+    
+    .navbar-nav {
+      flex-direction: column;
+    }
+    
+    .navbar-toggler {
+      margin-right: 1rem;
+    }
+    
+    .nav-item {
+      margin-bottom: 1rem;
+    }
+
+    #CoachProgress {
+      margin-top: 50px;
+    }
+
+    #AddCourse{
+      margin-top: 50px;
+    }
+  }
+
+  

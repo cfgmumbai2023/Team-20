@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@chakra-ui/react": "^2.7.1",
+    "prop-types": "^15.8.1"
+  }
+}
