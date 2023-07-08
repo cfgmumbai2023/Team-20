@@ -20,6 +20,8 @@ export default function CoursePage({props}) {
                     <div className="big">{props.title}</div>
                     <div className="small">{props.description}</div>
                     <div className="medium">Author: {props.instructor}</div>
+                    <div className="medium">Rating: {props.rating}/5</div>
+                    <div className="medium">Views: {props.views}</div>
                 </div>
                 <div className="banner-img">
                     <img src={props.image} alt="" />

@@ -9,6 +9,7 @@ export default function HomePage() {
     image: "https://cdn.britannica.com/51/190751-050-147B93F7/soccer-ball-goal.jpg",
     instructor: "John Doe",
     rating: 4,
+    views: 165,
     price: 500,
     duration: 12.5,
     lessons: [
