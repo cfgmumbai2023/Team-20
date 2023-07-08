@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors')
 const mongoose = require("mongoose");
 
-const Course = require('./Models/Course');
+const {Course} = require('./Models/Course');
 
 app.use(cors());
 app.use(express.json());
@@ -27,7 +27,7 @@ app.post('/addcourse', async (req, res) => {
   const data = req.body;
   const course = new Course(data);
 
-  await course.save();
+  let ret = await course.save();
 
   res.send('ok');
 })

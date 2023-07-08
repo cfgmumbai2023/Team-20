@@ -1,5 +1,11 @@
 .coursepage-container{
     position: relative;
+    padding-bottom: 2rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 50% 1fr;
 }
 
 .xmark{
@@ -43,6 +49,11 @@
     align-items: flex-start;
 }
 
+.banner-text > .btn{
+    width: max-content;
+    padding: .5rem .75rem;
+}
+
 .banner-img{
     width: 100%;
     display: flex;
@@ -84,6 +95,7 @@
 
 .list{
     padding: 2rem;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -94,7 +106,7 @@
     border: 2px solid rgb(58, 58, 58);
     border-radius: 10px;
     margin-bottom: 1rem;
-    width: 50%;
+    width: 100%;
     cursor: pointer;
     padding: .5rem 1rem;
     padding-bottom: 0;
@@ -134,4 +146,66 @@
 .overlay-description{
     margin-top: 2rem;
     font-size: 1.5rem;
+}
+
+.feedback{
+    padding: 0 2rem;
+}
+
+.feedback > .big{
+    margin-bottom: 0;
+}
+
+.stars-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: gray;
+}
+
+.feedback > textarea{
+    width: 100%;
+    height: 8rem;
+    padding: .5rem;
+    border: 2px solid black;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+.btns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.feedback > .btns > .btn{
+    margin-top: 1rem;
+    width: max-content;
+}
+
+.assessment{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.assessment > .big {
+    margin-top: 1rem;
+}
+
+.question > input{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+.assessment-container > .btn{
+    width: max-content;
 }

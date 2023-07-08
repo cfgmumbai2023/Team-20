@@ -23,13 +23,30 @@ export default function HomePage() {
         title: "Building the attack",
         link: "https://www.youtube.com/embed/x_H_Q-tJVS8",
         description: "David Powderly, presents three coaching ideas to help young players build the attack. During this session players will develop their understanding of...",
-        format: "video"
+        format: "pdf"
       },
       {
         title: "Ball mastery and soccer drills",
         link: "https://www.youtube.com/embed/IeMYh7roBjk",
         description: "Ball Mastery drills and Coerver Coaching improves your technique perfektly. Improve your ball controll, dribbling,  fast footwork, technique, first touch, fast feet  and coordination with 30 Football Soccer Ball Mastery & Coerver drills als at home!",
         format: "video"
+      }
+    ],
+    assessment: [
+      {
+        question: "What is the answer for this?",
+        answer: "op1",
+        options: ["op1", "op2", "op3", "op4"]
+      },
+      {
+        question: "What is the answer for question 2?",
+        answer: "op2",
+        options: ["op1", "op2", "op3", "op4"]
+      },
+      {
+        question: "What is the answer for the next?",
+        answer: "op3",
+        options: ["op1", "op2", "op3", "op4"]
       }
     ]
   }
