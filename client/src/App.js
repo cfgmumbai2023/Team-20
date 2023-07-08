@@ -2,11 +2,7 @@ import { Routes , Route} from 'react-router-dom';
 import './App.css';
 import CoursePage from './Pages/CoursePage';
 import HomePage from './Pages/HomePage';
-// import axios from 'axios';
 import { UserContextProvider } from './userContext';
-
-// axios.defaults.baseURL = 'http://localhost:5000/';
-// axios.defaults.withCredentials = true;
 
 function App() {
   const data = {

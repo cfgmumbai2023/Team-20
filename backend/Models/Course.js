@@ -21,6 +21,10 @@ const courseSchema = new mongoose.Schema({
         type: Number,
         require: true
     },
+    views: {
+        type: Number,
+        require: true
+    },
     price: {
         type: Number,
         require: true
@@ -39,6 +43,10 @@ const courseSchema = new mongoose.Schema({
             require: true
         },
         link: {
+            type: String,
+            require: true
+        },
+        format: {
             type: String,
             require: true
         }

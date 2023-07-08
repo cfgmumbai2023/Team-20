@@ -3,7 +3,10 @@ const app = express();
 const cors = require('cors')
 const mongoose = require("mongoose");
 
+const Course = require('./Models/Course');
+
 app.use(cors());
+app.use(express.json());
 
 require("dotenv").config();
 
@@ -18,4 +21,13 @@ const server = app.listen(port,()=> console.log(`server is running ${port}`));
 
 app.get('/test', (req, res) => {
   res.send({msg : "hello"});
+})
+
+app.post('/addcourse', async (req, res) => {
+  const data = req.body;
+  const course = new Course(data);
+
+  await course.save();
+
+  res.send('ok');
 })

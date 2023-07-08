@@ -1,3 +1,16 @@
+.coursepage-container{
+    position: relative;
+}
+
+.xmark{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 .big{
     font-size: 2.5rem;
     font-weight: 600;
@@ -66,6 +79,7 @@
     width: 6rem;
     margin-right: 1rem;
     text-align: center;
+    cursor: pointer;
 }
 
 .list{
@@ -84,4 +98,40 @@
     cursor: pointer;
     padding: .5rem 1rem;
     padding-bottom: 0;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+    padding: 2rem;
+}
+
+.overlay-title{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.overlay-description{
+    margin-top: 2rem;
+    font-size: 1.5rem;
 }
