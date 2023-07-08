@@ -41,6 +41,10 @@ const courseSchema = new mongoose.Schema({
         link: {
             type: String,
             require: true
+        },
+        format: {
+            type: String,
+            require: true
         }
     }],
     assessment: [{
