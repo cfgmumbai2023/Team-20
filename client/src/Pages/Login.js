@@ -4,6 +4,7 @@ import LockPersonIcon from '@mui/icons-material/LockPerson';
 import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
+import Header from "../Component/Header";
 
 
 function Login() {
@@ -29,8 +30,8 @@ function Login() {
 
   const paperStyle = {
     padding:20,
-    height:'60vh',
-    width:280,
+    height:'65vh',
+    width:'50vh',
     margin:'50px auto',
   }
 
@@ -38,7 +39,8 @@ function Login() {
 
   return (
     <>
-      <Grid>
+      <Header />
+      <Grid sx={{mt:15}}>
         <Paper elevation={10} style={paperStyle}>
           <Grid align='center'>
             <Avatar style={avatarStyle}><LockPersonIcon/></Avatar>
@@ -67,6 +69,7 @@ function Login() {
             fullWidth required/>
 
           <Button  
+            sx={{mt:2}}
             variant="contained" 
             type='submit' 
             onClick={handleSubmit}
@@ -74,8 +77,11 @@ function Login() {
             fullWidth>
               Sign in
           </Button>
-          <Typography className="">
+          <Typography sx={{mt:2}}>
             <Link to="#">Forget Password ?</Link>
+          </Typography>
+          <Typography sx={{mt:1}}>
+            <Link to={"/register"}>New user? Register here </Link>
           </Typography>
         </Paper>
       </Grid>
