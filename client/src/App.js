@@ -18,7 +18,7 @@ function App() {
         <Route index path='/' element={<HomePage />} />
         <Route  path='/register' element={<Signup />} />
         <Route  path='/login' element={<Login />} /> 
-
+        <Route path='/course' element={<CoursePage />} />
       </Routes>
     </UserContextProvider>
   );

@@ -1,22 +1,18 @@
 const express = require("express");
-<<<<<<< HEAD
-=======
-const app = express();
-const cors = require('cors')
->>>>>>> 054dc1e7baecce312d47308bff0d66110612c67d
 const mongoose = require("mongoose");
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const fs = require('fs');
+const app = express();
 
 const {Course} = require('./Models/Course');
+const {User} = require('./Models/User');
 
 app.use(cors());
 app.use(express.json());
 
 require("dotenv").config();
-const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json({limit:'2mb'}))
 app.use(cors());
@@ -34,6 +30,21 @@ const server = app.listen(port,()=> console.log(`server is running ${port}`));
 
 app.get('/test', (req, res) => {
   res.send({msg : "hello"});
+})
+
+app.post('/getUser', async (req, res)=>{
+  const result = await User.findOne({email: req.body.email, password: req.body.pass})
+
+  res.send(result);
+})
+
+app.post('/register', async (req, res) => {
+  const data = req.body;
+  const user = new User(data);
+
+  let ret = await user.save();
+
+  res.send('ok');
 })
 
 app.post('/addcourse', async (req, res) => {

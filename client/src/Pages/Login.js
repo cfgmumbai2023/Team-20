@@ -3,13 +3,15 @@ import { Avatar, Grid , Paper, Typography } from "@mui/material";
 import LockPersonIcon from '@mui/icons-material/LockPerson';
 import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Header from "../Component/Header";
+import { useNavigate } from "react-router-dom";
 
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const updateEmail = (event) => {
     setEmail(event.target.value);
@@ -23,9 +25,20 @@ function Login() {
     e.preventDefault();
     let isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!isValidEmail) alert("Not a valid email ");
-    console.log("email : " + email);
-    console.log("password : " + password);
-    console.log("welcome");
+    
+    fetch("http://localhost:5000/getUser", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({email: email, pass: password})
+    })
+    .then(res => res.json())
+    .then(res => {
+      if(res !== null){
+        navigate("/");
+      }
+    })
   };
 
   const paperStyle = {
