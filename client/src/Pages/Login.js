@@ -3,13 +3,23 @@ import { Avatar, Grid , Paper, Typography } from "@mui/material";
 import LockPersonIcon from '@mui/icons-material/LockPerson';
 import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import Header from "../Component/Header";
+=======
+import { Link, Navigate } from "react-router-dom";
+import Header from "../Component/Header";
+import { useNavigate } from "react-router-dom";
+>>>>>>> 9b409a4adfbe4b26074cbf330fbe159f275cb52b
 
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+<<<<<<< HEAD
+=======
+  const navigate = useNavigate();
+>>>>>>> 9b409a4adfbe4b26074cbf330fbe159f275cb52b
 
   const updateEmail = (event) => {
     setEmail(event.target.value);
@@ -23,9 +33,26 @@ function Login() {
     e.preventDefault();
     let isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!isValidEmail) alert("Not a valid email ");
+<<<<<<< HEAD
     console.log("email : " + email);
     console.log("password : " + password);
     console.log("welcome");
+=======
+    
+    fetch("http://localhost:5000/getUser", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({email: email, pass: password})
+    })
+    .then(res => res.json())
+    .then(res => {
+      if(res !== null){
+        navigate("/");
+      }
+    })
+>>>>>>> 9b409a4adfbe4b26074cbf330fbe159f275cb52b
   };
 
   const paperStyle = {

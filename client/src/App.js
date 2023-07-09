@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from 'react';
 // import Dashboard from './components/Dashboard';
 // import Sidebar from './components/Sidebar';
@@ -30,6 +31,8 @@
 // }
 
 // export default App
+=======
+>>>>>>> 9b409a4adfbe4b26074cbf330fbe159f275cb52b
 import { Routes , Route} from 'react-router-dom';
 import './App.css';
 import CoursePage from './Pages/CoursePage';
@@ -50,7 +53,11 @@ function App() {
         <Route index path='/' element={<HomePage />} />
         <Route  path='/register' element={<Signup />} />
         <Route  path='/login' element={<Login />} /> 
+<<<<<<< HEAD
 
+=======
+        <Route path='/course' element={<CoursePage />} />
+>>>>>>> 9b409a4adfbe4b26074cbf330fbe159f275cb52b
       </Routes>
     </UserContextProvider>
   );
