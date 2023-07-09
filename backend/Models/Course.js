@@ -5,6 +5,10 @@ const courseSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    description: {
+        type: String,
+        require: true
+    },
     image: {
         type: String,
         require: true
@@ -14,6 +18,10 @@ const courseSchema = new mongoose.Schema({
         require: true
     },
     rating: {
+        type: Number,
+        require: true
+    },
+    views: {
         type: Number,
         require: true
     },
@@ -35,6 +43,10 @@ const courseSchema = new mongoose.Schema({
             require: true
         },
         link: {
+            type: String,
+            require: true
+        },
+        format: {
             type: String,
             require: true
         }
