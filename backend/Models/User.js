@@ -11,14 +11,10 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     contact: {
-        type: String,
+        type: Number,
         require: true
     },
     password: {
-        type: String,
-        require: true
-    },
-    photo: {
         type: String,
         require: true
     },
@@ -42,11 +38,11 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
     },
     level: {
-        type: Number,
+        type: String,
         require: true
     }
 });
 
 const User = mongoose.model('users', userSchema);
 
-module.exports = {User};
+module.exports = User;
