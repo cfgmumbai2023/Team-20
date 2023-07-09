@@ -1,5 +1,7 @@
 import React from 'react'
-import CoursePage from './CoursePage';
+import Header from '../Component/Header'
+import MainPage from './MainPage';
+import '../Css/mainPage.css'
 
 export default function HomePage() {
 
@@ -52,6 +54,9 @@ export default function HomePage() {
   }
 
   return (
-    <CoursePage props={data} />
+    <div>
+        <Header />
+        <MainPage />
+    </div>
   )
 }
